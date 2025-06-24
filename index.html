@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theatre Show</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="icon3.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/ts2.png" alt="Logo">
+        </div>
+        
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="theatre.html">Theatre</a></li>
+            <li><a href="artist.html">Artist Gallery</a></li>
+            <li><a href="auditorium.html">Auditorium</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="mobile-signup"><a href="signup.html">Sign up</a></li>
+        </ul>
+        <div class="icons">
+            <a href="signup.html"><i class="fas fa-user"></i></a>
+            
+        </div>
+    </nav>
+    <div class="product-showcase">
+        <button class="slide-arrow prev-arrow">&#8249;</button>
+        <div class="product-container">
+            <div class="product">
+                <img src="https://abdullah154128.github.io/TheatreShowFinal/The-Phantom-of-the-Opera-His-Majestys-Theatre.webp" alt="Product 1">
+                <div class="product-info">
+                    <h2>The Phantom of the Opera</h2>
+                    <p>By Andrew Lloyd Webber</p>
+                    <button class="show-btn" id="btn" data-show="A">Book now!</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://abdullah154128.github.io/TheatreShowFinal/scene-moulin-rouge.jpg" alt="Product 2">
+                <div class="product-info">
+                    <h2>Moulin Rouge! The Musical</h2>
+                    <p>By Baz Luhrmann & Craig Pearce</p>
+                    <button class="show-btn" id="btn" data-show="B">Book now!</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://abdullah154128.github.io/TheatreShowFinal/hamilton-theatre-marquee.jpg" alt="Product 3">
+                <div class="product-info">
+                    <h2>Hamilton</h2>
+                    <p>By Alexander Hamilton</p>
+                    <button class="show-btn" id="btn" data-show="C">Book now!</button>
+                </div>
+            </div>
+        </div>
+        <button class="slide-arrow next-arrow">&#8250;</button>
+    </div>
+    <div class="heading">
+        <h1>Upcoming Shows!</h1>
+    </div>
+
+    <section class="product-grid">
+
+        <div class="featured-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/captain-america-brave-new-worlds-reshoots-have-reimagined-serpent-society-as-special-ops-team---spoilers-ab216029.jpg"
+                alt="Featured Show">
+            <div class="featured-content">
+                <h3>Captain America Brave New World</h3>
+                <p class="description">By Marvel Studios - Special Featured Show!</p>
+                <p class="price">$29.99</p>
+                <button class="show-btn" data-show="AF">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="data:image/jpeg;base64,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" alt="Product 5">
+            <div class="product-details">
+                <h3>Oedipus Rex</h3>
+                <p class="description">By Andrew Lloyd Webber</p>
+                <p class="price">$39.99</p>
+                <button class="show-btn" data-show="E">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/hky.jpeg" alt="Product 6">
+            <div class="product-details">
+                <h3>Hua Kuch Yoon</h3>
+                <p class="description">By Dawar Mehmood</p>
+                <p class="price">$19.99</p>
+                <button class="show-btn" data-show="G">Book Now!</button>
+            </div>
+        </div>
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/scene-moulin-rouge.jpg" alt="Product 1">
+            <div class="product-details">
+                <h3>Moulin Rouge!</h3>
+                <p class="description">By Baz Lurhmman & Craig Pearce</p>
+                <p class="price">$24.99</p>
+                <button class="show-btn" data-show="B">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/harry.jpg" alt="Product 6">
+            <div class="product-details">
+                <h3>Harry Potter and the Curse Child</h3>
+                <p class="description">By Stephen Schwartz</p>
+                <p class="price">$59.99</p>
+                <button class="show-btn" data-show="F">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/bananistan.png" alt="Product 6">
+            <div class="product-details">
+                <h3>Bananistan</h3>
+                <p class="description">By Tulin Khalid Azeem</p>
+                <p class="price">$19.99</p>
+                <button class="show-btn" data-show="I">Book Now!</button>
+            </div>
+        </div>
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/flight.png" alt="Product 6">
+            <div class="product-details">
+                <h3>Flight Risk</h3>
+                <p class="description">By Mel Gibson</p>
+                <p class="price">$19.99</p>
+                <button class="show-btn" data-show="N">Book Now!</button>
+            </div>
+        </div>
+
+
+
+    </section>
+    <div class="heading">
+        <h1>All Time Best!</h1>
+    </div>
+    <section class="product-grid">
+
+        <div class="featured-box-alt">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/intersteller.jpg" alt="Featured Show">
+            <div class="featured-content">
+                <h3>Interstellar</h3>
+                <p class="description">By Christopher Nolan - Special Featured Show!</p>
+                <p class="price">$29.99</p>
+                <button class="show-btn" data-show="Y">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/the-dark-knight-original.jpg" alt="Product 1">
+            <div class="product-details">
+                <h3>The Dark Knight</h3>
+                <p class="description">By Christopher Nolan</p>
+                <p class="price">$45.99</p>
+                <button class="show-btn" data-show="L">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/lion.jpg" alt="Product 6">
+            <div class="product-details">
+                <h3>The Lion King</h3>
+                <p class="description">By Taymor</p>
+                <p class="price">$19.99</p>
+                <button class="show-btn" data-show="K">Book Now!</button>
+            </div>
+        </div>
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/hamilton-theatre-marquee.jpg" alt="Product 1">
+            <div class="product-details">
+                <h3>Hamilton Theatre Marquee</h3>
+                <p class="description">By Sophocles</p>
+                <p class="price">$29.99</p>
+                <button class="show-btn" data-show="C">Book Now!</button>
+            </div>
+        </div>
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/The-Phantom-of-the-Opera-His-Majestys-Theatre.webp" alt="Product 1">
+            <div class="product-details">
+                <h3>The Phantom of the Opera</h3>
+                <p class="description">By Andrew Llyold Webber</p>
+                <p class="price">$34.99</p>
+                <button class="show-btn" data-show="A">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/endgame.jpg" alt="Product 1">
+            <div class="product-details">
+                <h3>Avengers: Endgame</h3>
+                <p class="description">By Joe Russo & Anthony Russo</p>
+                <p class="price">$42.99</p>
+                <button class="show-btn" data-show="O">Book Now!</button>
+            </div>
+        </div>
+
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/wicked.jpg" alt="Product 1">
+            <div class="product-details">
+                <h3>Wicked</h3>
+                <p class="description">By Stephen Schwartz</p>
+                <p class="price">$45.99</p>
+                <button class="show-btn" data-show="AG">Book Now!</button>
+            </div>
+        </div>
+
+
+    </section>
+    <div class="heading">
+        <h1>Recommended</h1>
+    </div>
+
+    <section class="product-grid">
+
+        <div class="featured-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/oppenheimer.jpg" alt="Featured Show">
+            <div class="featured-content">
+                <h3>Oppenheimer</h3>
+                <p class="description">By Christopher Nolan - Special Featured Show!</p>
+                <p class="price">$29.99</p>
+                <button class="show-btn" data-show="X">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/dil.png" alt="Product 6">
+            <div class="product-details">
+                <h3>Dil e Nadaan</h3>
+                <p class="description">By Omair Rana</p>
+                <p class="price">$19.99</p>
+                <button class="show-btn" data-show="J">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/meg2.jpg" alt="Product 1">
+            <div class="product-details">
+                <h3>The Meg</h3>
+                <p class="description">By Jon Turteltaub</p>
+                <p class="price">$39.99</p>
+                <button class="show-btn" data-show="M">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/mughal.jpeg" alt="Product 6">
+            <div class="product-details">
+                <h3>Mughal-e-Azam</h3>
+                <p class="description">By Faraz Zubair</p>
+                <p class="price">$19.99</p>
+                <button class="show-btn" data-show="H">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/schmigadoon.jpg" alt="Product 1">
+            <div class="product-details">
+                <h3>Schimgadoon</h3>
+                <p class="description">By Cinco Paul & Ken Daurio</p>
+                <p class="price">$17.99</p>
+                <button class="show-btn" data-show="D">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/tenet.jpg" alt="Product 1">
+            <div class="product-details">
+                <h3>Tenet</h3>
+                <p class="description">By Christopher Nolan</p>
+                <p class="price">$37.99</p>
+                <button class="show-btn" data-show="P">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/jurassic.jpg" alt="Product 1">
+            <div class="product-details">
+                <h3>Jurassic Park</h3>
+                <p class="description">By Colin Trevorrow</p>
+                <p class="price">$42.99</p>
+                <button class="show-btn" data-show="AH">Book Now!</button>
+            </div>
+        </div>
+
+
+    </section>
+
+    <div class="heading">
+        <h1>Thriller Movies</h1>
+    </div>
+
+    <section class="product-grid">
+
+        <div class="featured-box-alt">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/infinity.jpg" alt="Featured Show">
+            <div class="featured-content">
+                <h3>Avengers: Infinity War</h3>
+                <p class="description">By Joe Russo & Anthony Russo - Special Featured Show!</p>
+                <p class="price">$29.99</p>
+                <button class="show-btn" data-show="Z">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/spidernwh.webp" alt="Product 6">
+            <div class="product-details">
+                <h3>Spiderman: No way Home</h3>
+                <p class="description">By Marvel Studios</p>
+                <p class="price">$19.99</p>
+                <button class="show-btn" data-show="AA">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/megan.jpeg" alt="Product 1">
+            <div class="product-details">
+                <h3>M3GAN</h3>
+                <p class="description">By Gerard Johnstone</p>
+                <p class="price">$39.99</p>
+                <button class="show-btn" data-show="AB">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/jumanji.jpg" alt="Product 6">
+            <div class="product-details">
+                <h3>Jumanji</h3>
+                <p class="description">By Jake Kasdan</p>
+                <p class="price">$19.99</p>
+                <button class="show-btn" data-show="AC">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/conjuring.jpg" alt="Product 1">
+            <div class="product-details">
+                <h3>The Conjuring 2</h3>
+                <p class="description">By James Wan</p>
+                <p class="price">$17.99</p>
+                <button class="show-btn" data-show="AD">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/tin.webp" alt="Product 1">
+            <div class="product-details">
+                <h3>Tin & Tina</h3>
+                <p class="description">By Rubin Stein</p>
+                <p class="price">$37.99</p>
+                <button class="show-btn" data-show="AE">Book Now!</button>
+            </div>
+        </div>
+
+        <div class="product-box">
+            <img src="https://abdullah154128.github.io/TheatreShowFinal/maleficent.jpg" alt="Product 1">
+            <div class="product-details">
+                <h3>Maleficent</h3>
+                <p class="description">By Robert Stromberg</p>
+                <p class="price">$42.99</p>
+                <button class="show-btn" data-show="Q">Book Now!</button>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- Add this before closing body tag in index.html -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Theatre Show is your premier destination for booking theatre tickets and experiencing the magic of
+                    live performances.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="theatre.html">Theatre</a></li>
+                    <li><a href="artist.html">Artists</a></li>
+                    <li><a href="AUDITORIUM.html"</li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="data:image/png;base64,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"></i> +92 123 456 789</p>
+                <p><i class="fas fa-envelope"></i> info@theatreshow.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Theatre Show. All rights reserved.</p>
+        </div>
+    </footer>
+    </body>
+    </html>
